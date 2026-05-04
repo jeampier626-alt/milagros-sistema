@@ -63,10 +63,9 @@ export const TXN_META = {
 
 // ── Initial users ─────────────────────────────────────────────────────────
 export const SEED_USERS = [
-  { id:1, name:"Milagros Flores",  username:"duena",   password:"milagros2024", role:"owner",  active:true },
-  { id:2, name:"Carmen Rodríguez", username:"admin",   password:"admin123",     role:"admin",  active:true },
-  { id:3, name:"Rosa Quispe",      username:"rosa",    password:"rosa123",      role:"seller", active:true },
-  { id:4, name:"Ana Torres",       username:"ana",     password:"ana123",       role:"seller", active:true },
+  { id:1, name:"Victoria Ramos Cano",  username:"Victoria1904", password:"pequeñita951", role:"owner",  active:true },
+  { id:2, name:"Rosario Ramos Cano",   username:"Rosario1547",  password:"tengosueño7542", role:"admin",  active:true },
+  { id:3, name:"Jeampier Muñoz Silva", username:"Jeampier",     password:"Jeampier626",  role:"admin",  active:true },
 ];
 
 // ── Initial inventory ─────────────────────────────────────────────────────
