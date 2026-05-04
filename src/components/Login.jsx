@@ -41,15 +41,7 @@ export default function Login() {
           </div>
           <Btn v="rose" sz="lg" full type="submit" disabled={busy}>{busy?"Ingresando…":"✨ Ingresar al Sistema"}</Btn>
         </form>
-
-        <div className="auth-demo">
-          <p className="auth-demo-title">Cuentas de demostración</p>
-          {[["👑 Dueña","Victoria1904","pequeñita951"],["🛡️ Admin","Rosario1547","tengosueño7542"],["🛡️ Admin","Jeampier","Jeampier626"]].map(([r,u,p])=>(
-            <div className="auth-demo-row" key={u}>
-              <span>{r}</span>
-              <code style={{color:"var(--text3)",fontSize:11}}>{u} / {p}</code>
-            </div>
-          ))}
+))}
         </div>
       </div>
     </div>
