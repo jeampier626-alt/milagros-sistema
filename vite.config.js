@@ -7,6 +7,7 @@ export default defineConfig({
   resolve: {
     alias: { "@": path.resolve(__dirname, "./src") }
   },
+  build: { rollupOptions: { output: { entryFileNames: 'assets/[name]-[hash]-v2.js' } } },
   plugins: [
     react(),
     VitePWA({
