@@ -9,8 +9,8 @@ export const useApp = () => useContext(Ctx);
 let _sb = null;
 const getSB = () => {
   if (_sb) return _sb;
-  const url = import.meta.env.VITE_SUPABASE_URL;
-  const key = import.meta.env.VITE_SUPABASE_ANON_KEY;
+  const url = import.meta.env.VITE_SUPABASE_URL || "https://fsdaayedpkvxbyagmihh.supabase.co";
+  const key = import.meta.env.VITE_SUPABASE_ANON_KEY || "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZzZGFheWVkcGt2eGJ5YWdtaWhoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzgwMzYxNTEsImV4cCI6MjA5MzYxMjE1MX0.BFWl9oECnfLOhzm_G5prqSxPNY2En8Mz6jE2ZI0FR5Y";
   if (!url || !key) return null;
   try {
     const { createClient } = window.__supabase || {};
@@ -40,8 +40,8 @@ export function AppProvider({ children }) {
 
   async function loadData() {
     // Try Supabase first
-    const url = import.meta.env.VITE_SUPABASE_URL;
-    const key = import.meta.env.VITE_SUPABASE_ANON_KEY;
+    const url = import.meta.env.VITE_SUPABASE_URL || "https://fsdaayedpkvxbyagmihh.supabase.co";
+    const key = import.meta.env.VITE_SUPABASE_ANON_KEY || "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZzZGFheWVkcGt2eGJ5YWdtaWhoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzgwMzYxNTEsImV4cCI6MjA5MzYxMjE1MX0.BFWl9oECnfLOhzm_G5prqSxPNY2En8Mz6jE2ZI0FR5Y";
     
     if (url && key) {
       try {
