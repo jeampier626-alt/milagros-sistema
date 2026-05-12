@@ -278,11 +278,9 @@ export function AppProvider({ children }) {
   );
 }
 
-// ── DB mappers (snake_case → camelCase) ──────────────────────────────────
+// DB mappers (snake_case to camelCase)
 const mapUsers = r => r?.map(u => ({ id:u.id, name:u.name, username:u.username, password:u.password, role:u.role, active:u.active })) || [];
 const mapItems = r => r?.map(i => ({ id:i.id, nombre:i.nombre, codigo:i.codigo, categoria:i.categoria, calidad:i.calidad, talla:i.talla, color:i.color, estado:i.estado, tipo:i.tipo, precioVenta:Number(i.precio_venta)||0, precioAlquiler:Number(i.precio_alquiler)||0, notas:i.notas||"", imagen:i.imagen||null })) || [];
 const mapAlq  = r => r?.map(a => ({ id:a.id, itemId:a.item_id, sellerId:a.seller_id, sellerName:a.seller_name, cliente:a.cliente, dni:a.dni||"", telefono:a.telefono||"", fechaInicio:a.fecha_inicio, fechaDevolucion:a.fecha_devolucion, fechaDevolucionReal:a.fecha_devolucion_real, precioBase:Number(a.precio_base)||0, descuento:Number(a.descuento)||0, montoTotal:Number(a.monto_total)||0, deposito:Number(a.deposito)||0, estado:a.estado, notas:a.notas||"", cancelado:a.cancelado||false, canceladoPor:a.cancelado_por||"", fechaCancelacion:a.fecha_cancelacion||"" })) || [];
 const mapHist = r => r?.map(h => ({ id:h.id, tipo:h.tipo, sellerId:h.seller_id, sellerName:h.seller_name||"", itemId:h.item_id, itemNombre:h.item_nombre||"", itemCodigo:h.item_codigo||"", cliente:h.cliente||"", fecha:h.fecha, precioBase:Number(h.precio_base)||0, descuento:Number(h.descuento)||0, monto:Number(h.monto)||0, notas:h.notas||"", cancelado:h.cancelado||false, canceladoPor:h.cancelado_por||"" })) || [];
 const mapCaja = r => r?.map(c => ({ id:c.id, tipo:c.tipo, categoria:c.categoria||"", descripcion:c.descripcion||"", monto:Number(c.monto)||0, fecha:c.fecha, userId:c.user_id, userName:c.user_name||"", refId:c.ref_id, cancelado:c.cancelado||false })) || [];
-/ /   f o r c e   r e b u i l d  
- 
