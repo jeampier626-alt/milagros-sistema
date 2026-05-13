@@ -7,7 +7,6 @@ export default defineConfig({
   resolve: {
     alias: { "@": path.resolve(__dirname, "./src") }
   },
-  build: { rollupOptions: { output: { entryFileNames: 'assets/[name]-[hash]-v2.js' } } },
   plugins: [
     react(),
     VitePWA({
@@ -26,7 +25,11 @@ export default defineConfig({
           { src: "pwa-512.png", sizes: "512x512", type: "image/png", purpose: "any maskable" }
         ]
       },
-      workbox: { globPatterns: ["**/*.{js,css,html,ico,png,svg}"] }
+      workbox: {
+        globPatterns: [],
+        runtimeCaching: []
+      },
+      devOptions: { enabled: false }
     })
   ]
 });
